@@ -1,0 +1,9 @@
+id = "cortex-debug"
+name = "Cortex Debug"
+version = "0.0.1"
+schema_version = 1
+authors = ["Paweł Korsak <p.korsak010@gmail.com>"]
+description = "Debugger for cortex embedded systems using GDB server."
+repository = "https://github.com/PawelKorsak/zed-cortex-debug-rs"
+
+[debug_adapters.cortex-debug]
