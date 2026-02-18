@@ -1,9 +1,9 @@
-id = "cortex-debug"
-name = "Cortex Debug"
+id = "cortex-debug-rs"
+name = "Cortex Debug Rs"
 version = "0.0.1"
 schema_version = 1
 authors = ["Paweł Korsak <p.korsak010@gmail.com>"]
-description = "Debugger for cortex embedded systems using GDB server."
+description = "Debugger for cortex embedded systems using GDB server written in Rust."
 repository = "https://github.com/PawelKorsak/zed-cortex-debug-rs"
 
-[debug_adapters.cortex-debug]
+[debug_adapters.cortex-debug-rs]
