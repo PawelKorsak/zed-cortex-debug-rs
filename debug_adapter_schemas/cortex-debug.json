@@ -1,5 +1,11 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Cortex Debug Rs",
-  "type": "object"
+  "type": "object",
+  "properties": {
+    "programBinary": {
+      "description": "Path to .elf file.",
+      "type": ["string", "null"]
+    }
+  }
 }
