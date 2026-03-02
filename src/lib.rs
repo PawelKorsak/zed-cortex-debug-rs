@@ -1,8 +1,10 @@
 use zed_extension_api::{
     self as zed, DebugAdapterBinary, DebugConfig, DebugRequest, DebugScenario, DebugTaskDefinition,
     StartDebuggingRequestArguments, StartDebuggingRequestArgumentsRequest, TcpArguments, Worktree,
-    serde_json,
+    register_extension, serde_json,
 };
+
+use serde_json::Value;
 
 struct ZedCortexDebugRs {}
 
@@ -44,4 +46,13 @@ impl zed::Extension for ZedCortexDebugRs {
             },
         })
     }
+    fn dap_request_kind(
+        &mut self,
+        _adapter_name: String,
+        _config: Value,
+    ) -> Result<StartDebuggingRequestArgumentsRequest, String> {
+        Ok(StartDebuggingRequestArgumentsRequest::Attach)
+    }
 }
+
+zed::register_extension!(ZedCortexDebugRs);
