@@ -24,6 +24,7 @@ impl zed::Extension for ZedCortexDebugRs {
         user_provided_debug_adapter_path: Option<String>,
         worktree: &Worktree,
     ) -> Result<DebugAdapterBinary, String> {
+        println!("Getting dap...");
         let command: Option<String> = Some("echo".to_string());
         let arguments: Vec<String> = vec!["testing zed debugger".to_string()];
 
@@ -51,6 +52,7 @@ impl zed::Extension for ZedCortexDebugRs {
         _adapter_name: String,
         _config: Value,
     ) -> Result<StartDebuggingRequestArgumentsRequest, String> {
+        println!("Determining DAP request...");
         Ok(StartDebuggingRequestArgumentsRequest::Attach)
     }
 }
